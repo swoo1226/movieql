@@ -33,3 +33,26 @@ export const deleteMovie = id => {
     return false;
   }
 };
+
+// 영화를 추가하는 함수
+export const addMovie = (name, score) => {
+  let hasSameMovie = () => {
+    for (let i = 0; i < movies.length; i++) {
+      if (movies[i].name === name) {
+        return false;
+      }
+    }
+    return true;
+  };
+  if (hasSameMovie()) {
+    const newMovie = {
+      id: `${movies.length} + 1`,
+      name,
+      score
+    };
+    movies.push(newMovie);
+    return newMovie;
+  } else {
+    return false;
+  }
+};
