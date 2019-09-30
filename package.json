@@ -17,7 +17,9 @@
     "url": "https://github.com/swoo1226/movieql/issues"
   },
   "homepage": "https://github.com/swoo1226/movieql#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-node": "0.0.1-security",

@@ -1,14 +1,13 @@
 type Movie {
-  name: String!
+  title: String!
   id: Int!
-  score: Int!
+  rating: Int!
+  summary: String
+  language: String
+  medium_cover_image: String
 }
 
 type Query {
   movies: [Movie]!
   movie(id: Int!): Movie
-}
-
-type Mutation {
-  addMovie(name: String!, score: Int!): Movie!
 }
