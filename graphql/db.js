@@ -1,6 +1,8 @@
-import fetch from 'node-fetch'
-const API_URL = 'https://yts.lt/api/v2/list_movies.json';
+import fetch from "node-fetch";
+const API_URL = "https://yts.lt/api/v2/list_movies.json";
 
 const getMovies = (limit, rating) => {
-    fetch(${API_URL}).then(res => res.json).then(json => json.data.movies)
-}
+  fetch(`${API_URL}`)
+    .then(res => res.json())
+    .then(json => json.data.movies);
+};
